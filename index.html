@@ -2,53 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tung Le - Portfolio</title>
+    
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tung Le - Portfolio</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              teal: {
-                300: '#5eead4',
-                400: '#2dd4bf',
-                500: '#14b8a6',
-              }
-            }
-          }
-        }
-      }
-    </script>
   </head>
-  <body>
-    <section
-      class="min-h-screen w-full flex flex-col justify-center items-center bg-[url('/imgs/banner.avif')] bg-cover bg-center">
-      <div class="w-full lg:w-[80%] p-12 text-gray-800">
-        <h1 class="text-6xl font-bold mb-10 grid grid-col-1 lg:gap-5">
+  <body class="bg-gray-50 text-gray-800">
+    
+    <section class="min-h-screen w-full flex flex-col justify-center items-center bg-gray-100 relative">
+      <div class="absolute inset-0 z-0 opacity-30 bg-[url('/imgs/banner.avif')] bg-cover bg-center"></div>
+      
+      <div class="w-full lg:w-[80%] p-12 relative z-10">
+        <h1 class="text-6xl font-bold mb-10 grid grid-cols-1 lg:gap-5">
           <span>Hi, my name is <span class="text-teal-400">Tung Le</span></span>
           <span class="text-gray-800">I'm the Web Developer.</span>
         </h1>
 
-        <a href="#about-me" class="uppercase border-2 border-teal-400 p-3 hover:bg-teal-400 hover:text-white transition-colors cursor-pointer">
-          <span class="text-xl pl-8 pr-8 pt-3 pb-3 font-light focus:outline-none focus:ring focus:ring-teal-300">Know more</span>
+        <a href="#about-me" class="inline-block uppercase border-2 border-teal-400 p-3 hover:bg-teal-400 hover:text-white transition-colors cursor-pointer">
+          <span class="text-xl px-8 py-3 font-light">Know more</span>
         </a>
       </div>
     </section>
+
     <section id="about-me" class="bg-teal-400 min-h-screen w-full flex flex-col justify-center items-center p-4 lg:p-12 text-white">
       <div class="w-full lg:w-[60%] mb-5">
         <h2 class="uppercase text-2xl lg:text-5xl text-center font-bold text-white mb-12">About Me</h2>
-        <div class="grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-3">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-3">
           <div class="flex justify-center items-center text-center col-span-1">
-            <img class="object-cover max-w-xs lg:w-auto" src="/imgs/avatar.png" title="My avatar" alt="My avatar" />
+            <img class="object-cover w-48 h-48 lg:w-auto lg:h-auto rounded-full border-4 border-white" src="/imgs/avatar.png" title="My avatar" alt="My avatar" />
           </div>
           <div class="col-span-1 lg:col-span-2 flex justify-center items-center">
             <div class="p-0 text-center lg:p-8 lg:text-start">
@@ -57,52 +44,51 @@
                 objective is to become a Senior Software Engineer who masters software architecture, design
                 principles, and modern development technologies.
               </p>
-              <a href="#" target="_blank"
-                class="uppercase border-2 border-white p-3 text-white hover:bg-white hover:text-teal-400 transition-colors cursor-pointer">
-                <span class="text-xl pl-8 pr-8 pt-3 pb-3 font-normal focus:outline-none focus:ring focus:ring-teal-300">View My CV</span>
+              <a href="#" target="_blank" class="inline-block uppercase border-2 border-white p-3 text-white hover:bg-white hover:text-teal-400 transition-colors cursor-pointer">
+                <span class="text-xl px-8 py-3 font-normal">View My CV</span>
               </a>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <section id="contact" class="bg-white min-h-[500px] w-full flex flex-col justify-center items-center p-6 lg:p-12 text-gray-800">
       <div class="w-full lg:w-[60%] mb-5">
         <h2 class="uppercase text-2xl lg:text-5xl text-center font-bold mb-6">Contact</h2>
         <p class="flex flex-col justify-center items-center pt-5 pb-5 text-center">
-          <span class="text-2xl text-teal-500 mb-3">I LOOK FORWARD TO WORKING WITH YOU</span>
+          <span class="text-2xl text-teal-500 mb-3 font-bold">I LOOK FORWARD TO WORKING WITH YOU</span>
           <span>I'm so happy that my skills might bring values to you. Let's connect for work</span>
         </p>
       </div>
-      <a href="mailto:your_email@gmail.com"
-        class="border-2 border-teal-400 pl-8 pr-8 pt-3 pb-3 bg-teal-400 text-white hover:bg-white hover:text-teal-400 transition-colors cursor-pointer">
-        <span class="text-xl uppercase font-light focus:outline-none focus:ring focus:ring-teal-300">Send An Email Now</span>
+      <a href="mailto:your_email@gmail.com" class="inline-block border-2 border-teal-400 px-8 py-3 bg-teal-400 text-white hover:bg-white hover:text-teal-400 transition-colors cursor-pointer font-bold">
+        SEND AN EMAIL NOW
       </a>
     </section>
-    <footer class="bg-neutral-900 min-h-[300px] pt-12 pb-12 flex flex-row justify-center items-center">
+
+    <footer class="bg-neutral-900 min-h-[300px] pt-12 pb-12 flex flex-col justify-center items-center text-white">
       <div class="w-[60%] flex flex-col justify-center items-center">
-        <ul class="flex flex-row">
-          <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
+        <ul class="flex flex-row space-x-6">
+          <li class="cursor-pointer hover:-translate-y-2 transition-transform">
             <a href="https://twitter.com" target="_blank">
-              <img class="w-10 grayscale hover:grayscale-0" src="/imgs/twitter.svg" />
+               <span class="text-gray-400 hover:text-white">Twitter</span>
             </a>
           </li>
-          <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
-            <a href="https://www.linkedin.com/in/tùng-lê-hoàng-563a69383/" target="_blank">
-              <img class="w-10 grayscale hover:grayscale-0" src="/imgs/linkedin.svg" />
+          <li class="cursor-pointer hover:-translate-y-2 transition-transform">
+            <a href="https://www.linkedin.com" target="_blank">
+               <span class="text-gray-400 hover:text-white">LinkedIn</span>
             </a>
           </li>
-          <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
+          <li class="cursor-pointer hover:-translate-y-2 transition-transform">
             <a href="https://github.com/lehoangtung269" target="_blank">
-              <img class="w-10 grayscale hover:grayscale-0" src="/imgs/github.svg" />
+               <span class="text-gray-400 hover:text-white">GitHub</span>
             </a>
           </li>
         </ul>
-        <hr class="w-1/2 border-gray-500 mt-10"/>
+        <hr class="w-1/2 border-gray-700 mt-10"/>
         <p class="text-lg text-gray-500 mt-5">©2025 - Tung Le</p>
       </div>
     </footer>
     
-    <script type="module" src="/src/scripts/application.js"></script>
-  </body>
+    </body>
 </html>
